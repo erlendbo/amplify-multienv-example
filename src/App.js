@@ -13,7 +13,7 @@ Amplify.configure(awsConfig);
 
 const ListView = ({ todos }) => (
   <div>
-    <h2>All Todos</h2>
+    <h2>All Items</h2>
     <ul>
       {todos.map(todo => (
         <li key={todo.id}>
@@ -91,7 +91,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <h2>Add Todo</h2>
+        <h2>Add Item</h2>
         <Connect mutation={graphqlOperation(mutations.createTodo)}>
           {({ mutation }) => <AddTodo onCreate={mutation} />}
         </Connect>
